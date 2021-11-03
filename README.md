@@ -31,4 +31,4 @@
 
 1. Deverá ser criado um repositório no git ou bitbucket com o nome de Test-Dev-Front-JR. Esse repositório deverá conter todo o código desenvolvido.
 
-2. Enviar o link do repositório para os emails de Paulo Tozzi (paulo.tozzi@diwe.com.br), Vinicius Silva (vinicius.silva@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
+2. Enviar o link do repositório para os emails de Vinicius Silva (vinicius.silva@diwe.com.br), Marcus Vinicius (vinicius.bassalobre@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
