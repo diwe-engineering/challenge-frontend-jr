@@ -1,5 +1,5 @@
 
-# Dev Froned Junior - Desafio
+# Dev Front-end Júnior 1 - Desafio
 
 ### O candidato deverá desenvolver o seguinte conjunto de componentes:
   **[https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694)**
