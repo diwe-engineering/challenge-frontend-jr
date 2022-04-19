@@ -1,34 +1,40 @@
 
-# Dev Front-end Júnior 1 - Desafio
 
-### O candidato deverá desenvolver o seguinte conjunto de componentes:
-  **[https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694)**
+# Desafio Técnico - Pessoa desenvolvedora Front-end Junior
+Na DIWE, atualmente trabalhamos preferencialmente com VUEJS e para processamento de estilos utilizamos SASS, mas fique à vontade para escolher a tecnologia que mais se adéque ao seu projeto.
+# Objetivo do teste
+O candidato(a) deverá desenvolver um crud de contatos (agenda) com autenticação, utilizando VUEJS (SPA com VUEX), SASS e consumindo uma API básica que disponibilizaremos neste documento.
+
+# Design da Aplicação 
+A interface do sistema deverá ser desenvolvida as bases do layout (figma), levando em consideração todos os componentes "protótipados" e seu comportamento quanto a responsividade.
+
+Abaixo o link do layout :
+
+**[https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694)**
   
-  
+# Requisitos
+O sistema deverá conter as seguintes rotas/páginas :
+ - Login (aberta), ou seja, não é necessário autenticação para acessá-la;
+ - Home (protegida por autenticação JWT), nesta página deverá ser exibido a listagem de contatos;
+ - Cadastro de contato (protegida por autenticação JWT), nesta página deverá ser exibido o formulário de cadastro de novo contato;
+ - Edição de contato (protegida por autenticação JWT), nesta página deverá ser exibido o formulário de edição de contato;
 
-## STACK
+O sistema também deverá fazer as seguintes validações :
+  - O campo de nome completo deverá obrigatório, deverá conter ao menos 2 palavras e não conter caracteres especiais ou numéricos;
+  - O campo de email deverá obrigatório e deverá nao ser um email válido (utiliza o próprio validador de input type['email'] do HTML5);
+  - O campo de celular deverá ser obrigatário e apenas conter números;
 
-1. HTML 
 
-3. CSS
+# API para integração
 
-4. JS ( VueJS será considerado diferencial)
-  
 
-## ESPECIFICAÇÕES  
 
-1. Todos os atributos de cada componente de ver mantido idêntico ao template;
 
-2. Os componentes devem ser responsivos e em caso de telas menores que 900px de largura, os mesmos devem se posicionar em coluna com cada card ocupando 100% de sua linha;
 
-3. Visualmente deverá estilizar seus elementos utilizando CSS puro ( sem frameworks como bootstrap ou tailwind), lembrando que a utilização de flexbox e elementos responsivos serão considerados diferenciais;
- 
-  
+# Entrega do Teste
+Ao fim do teste, crie um repositório aberto no github e o compartilhe com os seguintes emails:
+-   vinicius.silva@diwe.com.br
+-   maicon.passos@diwe.com.br
+-   vinicius.bassalobre@diwe.com.br.
 
-### Para envio do teste:
-
-  
-
-1. Deverá ser criado um repositório no git ou bitbucket com o nome de Test-Dev-Front-JR. Esse repositório deverá conter todo o código desenvolvido.
-
-2. Enviar o link do repositório para os emails de Vinicius Silva (vinicius.silva@diwe.com.br), Marcus Vinicius (vinicius.bassalobre@diwe.com.br) e Maicon Passos (maicon.passos@diwe.com.br)
+Boa sorte e obrigado por participar do nosso processo seletivo!
