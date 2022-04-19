@@ -13,24 +13,32 @@ Abaixo o link do layout :
 **[https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694](https://www.figma.com/file/MlDF7BP1BgodRv0BO4EQ4C/Desafio?node-id=2%3A1694)**
   
 # Requisitos
-O sistema deverá conter as seguintes rotas/páginas :
+O sistema deverá conter as seguintes rotas/páginas:
  - Login (aberta), ou seja, não é necessário autenticação para acessá-la;
  - Home (protegida por autenticação JWT), nesta página deverá ser exibido a listagem de contatos;
  - Cadastro de contato (protegida por autenticação JWT), nesta página deverá ser exibido o formulário de cadastro de novo contato;
  - Edição de contato (protegida por autenticação JWT), nesta página deverá ser exibido o formulário de edição de contato;
 
 O sistema também deverá fazer as seguintes validações :
-  - O campo de nome completo deverá obrigatório, deverá conter ao menos 2 palavras e não conter caracteres especiais ou numéricos;
-  - O campo de email deverá obrigatório e deverá nao ser um email válido (utiliza o próprio validador de input type['email'] do HTML5);
-  - O campo de celular deverá ser obrigatário e apenas conter números;
+  - O campo de nome completo deverá obrigatório, deverá conter ao menos 2 palavras, no máximo 150 caracteres e não conter caracteres especiais ou numéricos;
+  - O campo de email deverá obrigatório e deverá conter no máximo 255 caracteres e ser um email válido (utiliza o próprio validador de input type['email'] do HTML5);
+  - O campo de celular deverá conter no máximo 11 caracteres, ser uma string obrigatória contendo apenas números, exemplo "11999999999";
 
 
 # API para integração
+O sistema deverá consumir a seguinte API 
+**[https://api-challenge-frontend-diwe.herokuapp.com](https://api-challenge-frontend-diwe.herokuapp.com)*, abaixo uma pequena documentação de suas rotas, parâmetros e como utiliza-las:
 
-
-
-
-
+  - [POST] - /login, esta rota recebe obrigatoriamente os campos (email e password) e retorna o token JWT, que deverá ser utilizado para autenticar as demais rotas;
+  - [GET] - /contacts, caso autenticado com um token JWT válido, a API retorna a lista de todos os contatos;
+  - [GET] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota retorna apenas o contato em questão;
+  - [POST] - /contacts, caso autenticado com um token JWT válido, esta rota receberá um JSON contendo (name, email e phone) e caso essas informações atendam os requisitos citados no tópico anterior, um novo contato será cadastrado;
+  - [PUT] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota receberá um JSON contendo (name, email e phone) e caso essas informações atendam os requisitos citados no tópico anterior, o contato em questão será atualizado;
+  - [DELETE] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota excluirá o contato em questão;
+# Credenciais para autenticação
+  - email : candidato@diwe.com.br
+  - password : candidato#challenge
+  
 # Entrega do Teste
 Ao fim do teste, crie um repositório aberto no github e o compartilhe com os seguintes emails:
 -   vinicius.silva@diwe.com.br
