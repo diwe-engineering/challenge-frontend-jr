@@ -27,18 +27,45 @@ O sistema também deverá fazer as seguintes validações :
 
 # API para integração
 O sistema deverá consumir a seguinte API 
-**[https://api-challenge-frontend-diwe.herokuapp.com](https://api-challenge-frontend-diwe.herokuapp.com)*, abaixo uma pequena documentação de suas rotas, parâmetros e como utiliza-las:
+**[https://contacts-api.prd.parceirodaconstrucao.com.br/](https://contacts-api.prd.parceirodaconstrucao.com.br/)*, abaixo uma pequena documentação de suas rotas, parâmetros e como utiliza-las:
 
   - [POST] - /login, esta rota recebe obrigatoriamente os campos (email e password) e retorna o token JWT, que deverá ser utilizado para autenticar as demais rotas;
+  Body
+  ```json
+  {
+    "email": "user@diwe.com.br",
+    "password": "password"
+  }
+  ```
+
   - [GET] - /contacts, caso autenticado com um token JWT válido, a API retorna a lista de todos os contatos;
   - [GET] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota retorna apenas o contato em questão;
-  - [POST] - /contacts, caso autenticado com um token JWT válido, esta rota receberá um JSON contendo (name, email e phone) e caso essas informações atendam os requisitos citados no tópico anterior, um novo contato será cadastrado;
-  - [PUT] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota receberá um JSON contendo (name, email e phone) e caso essas informações atendam os requisitos citados no tópico anterior, o contato em questão será atualizado;
-  - [DELETE] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota excluirá o contato em questão;
-# Credenciais para autenticação
-  - email : candidato@diwe.com.br
-  - password : candidato#challenge
+  - [POST] - /contacts, caso autenticado com um token JWT válido, esta rota receberá um JSON contendo (name, email e mobile) e caso essas informações atendam os requisitos citados no tópico anterior, um novo contato será cadastrado;
+  Body 
+  ```json
+  {
+    "name": "João da Silva",
+    "email": "joao.silva@diwe.com.br",
+    "mobile": "11999999999"
+  }
+  ```
+
+  - [PUT] - /contacts/{id}, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota receberá um JSON contendo (name, email e mobile) e caso essas informações atendam os requisitos citados no tópico anterior, o contato em questão será atualizado;
+   ```json
+  {
+    "name": "João da Silva",
+    "email": "joao.silva@diwe.com.br",
+    "mobile": "11999999999"
+  }
+  ```
   
+  - [DELETE] - /contacts/:id, caso autenticado com um token JWT válido e o id informado for de um contato existente, esta rota excluirá o contato em questão;
+# Credenciais para autenticação
+  - email : user@diwe.com.br
+  - password : password
+
+
+# Uso de outras bibliotecas além das citadas é livre. 
 # Entrega do Teste
 Ao fim do teste, crie um repositório aberto no github e o compartilhe com os seguintes emails:
 -   vinicius.silva@diwe.com.br
